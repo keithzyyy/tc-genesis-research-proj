@@ -1,0 +1,85 @@
+---
+title: "TC Genesis Bayesian Analysis"
+author: "Keith Howen"
+date: "2025-03-10"
+output: pdf_document
+---
+
+## Working Directory Setup using `here()`
+Use `here()` to *standardize the working directory between R markdown and
+R console* as opposed to using `getwd()` (and `setwd()`), at the slight
+inconveniences of importing the `here` library, using `here()` to write file
+paths, and manually specify paths for files outside the working directory.
+
+```{r setup, include=FALSE}
+#install.packages('here')
+library(here)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+here()
+```
+
+
+
+## R Markdown tips (delete later)
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+#summary(cars)
+```
+
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+#plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+## Importing the data
+
+```{r}
+
+# equivalent to read.csv("../data/data_path)
+data_path = "envDataset_12h_10x10_with_mask.csv"
+data = read.csv(here("..", "data", data_path))
+
+```
+
+
+```{r}
+#str(data)
+```
+
+
+
+
+# Data Preprocessing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
